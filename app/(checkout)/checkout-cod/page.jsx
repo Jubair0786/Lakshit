@@ -110,7 +110,7 @@ export default async function Page({ searchParams }) {
       <section
   className="min-h-screen flex flex-col gap-3 justify-center items-center"
   style={{
-    backgroundImage: "url('/images/secuse.jpg')",
+    backgroundImage: "url('/images/sasasa.jpg')",
     backgroundSize: "cover",
     backgroundPosition: "center",
   }}
