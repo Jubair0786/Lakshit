@@ -17,7 +17,7 @@ export const createCheckoutAndGetURL = async ({ uid, products, address }) => {
           description: item?.product?.shortDescription ?? "",
           images: [
             item?.product?.featureImageURL ??
-              `${process.env.NEXT_PUBLIC_DOMAIN}/logo.png`,
+              `/logo.png`,
           ],
           metadata: {
             productId: item?.id,
@@ -39,8 +39,8 @@ export const createCheckoutAndGetURL = async ({ uid, products, address }) => {
       uid: uid,
       address: JSON.stringify(address),
     },
-    success_url: `${process.env.NEXT_PUBLIC_DOMAIN}/checkout-success?checkout_id=${checkoutId}`,
-    cancel_url: `${process.env.NEXT_PUBLIC_DOMAIN}/checkout-failed?checkout_id=${checkoutId}`,
+    success_url: `/checkout-success?checkout_id=${checkoutId}`,
+    cancel_url: `/checkout-failed?checkout_id=${checkoutId}`,
   });
 
   await new Promise((res) => setTimeout(res, 2000));
@@ -104,7 +104,7 @@ export const createCheckoutCODAndGetId = async ({ uid, products, address }) => {
           description: item?.product?.shortDescription ?? "",
           images: [
             item?.product?.featureImageURL ??
-              `${process.env.NEXT_PUBLIC_DOMAIN}/logo.png`,
+              `/logo.png`,
           ],
           metadata: {
             productId: item?.id,
